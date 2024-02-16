@@ -1,4 +1,4 @@
-import { CarProps } from "@/types";
+import { CarProps, FilterProps } from "@/types";
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
     const basePricePerDay = 50; // Base rental price per day in dollars
@@ -32,7 +32,7 @@ try {
 	console.error(error);
 }
 
-export async function fetchCars() {
+export async function fetchCars(filters: FilterProps) {
     const { manufacturer, year, model, limit, fuel } = filters;
   
     const headers: HeadersInit = {
