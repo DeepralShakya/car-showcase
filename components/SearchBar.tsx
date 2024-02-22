@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+
 import SearchManufacturer from "./SearchManufacturer";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
@@ -58,7 +59,7 @@ const SearchBar = () => {
       <div className='searchbar__item'>
         <SearchManufacturer
           manufacturer={manufacturer}
-          setManufacturer={setManuFacturer}
+          setManuFacturer={setManuFacturer}
         />
         <SearchButton otherClasses='sm:hidden' />
       </div>
